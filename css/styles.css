@@ -103,12 +103,14 @@ body {
 }
 
 .profile__link-item {
+  transition: background-color 250ms;
   border-radius: 10px;
   background-color: var(--grey700);
   padding: 0.85em;
 }
 
 .profile__link {
+  transition: color 250ms;
   color: var(--white);
   font-weight: 600;
   font-size: 1.3rem;
@@ -118,5 +120,15 @@ body {
   .profile {
     padding: 2.7em;
     max-width: 360px;
+  }
+
+  .profile__link-item:hover,
+  .profile__link-item:focus {
+    background-color: var(--green);
+  }
+
+  .profile__link-item:hover a,
+  .profile__link-item:focus a {
+    color: var(--grey900);
   }
 }
